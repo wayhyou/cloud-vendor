@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /src/target/*.jar app.jar
+COPY --from=build target/rest-demo-0.0.1-SNAPSHOT.jar cloudvendor.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "/cloudvendor.jar"]
