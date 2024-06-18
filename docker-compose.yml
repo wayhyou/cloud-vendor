@@ -7,12 +7,12 @@ services:
     restart: always
     environment:
       - POSTGRES_USER=enigma
-      - POSTGRES_PASSWORD=
       - POSTGRES_DB=cloud_vendor
+      - POSTGRES_HOST_AUTH_METHOD=trust
     ports:
-      - '5432:5432'
+      - '5434:5432'
 
-  recipe:
+  cloudvendor:
     container_name: cloudvendor_app
     build:
       context: .
