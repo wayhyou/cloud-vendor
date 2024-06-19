@@ -1,16 +1,16 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/cloud_vendor?useSSL=false
-    username: enigma
-    password:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/cloud_vendor?useSSL=false
+#    username: enigma
+#    password:
 
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
 
   jpa:
-    hibernate:
-      ddl-auto: update
+#    hibernate:
+#      ddl-auto: update
     open-in-view: false
 
 management:
